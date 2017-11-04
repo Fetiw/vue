@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <app-header></app-header>
+    <phone-book></phone-book>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import AppHeader from './components/Header'
+  import PhoneBook from './components/PnoneBook'
+
+  export default {
+    components: {
+      PhoneBook,
+      AppHeader },
+    name: 'app'
+  }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  @import "~sanitize.css";
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
